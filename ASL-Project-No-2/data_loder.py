@@ -4,7 +4,7 @@ import shutil
 import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.applications.efficientnet import preprocess_input  # Updated for EfficientNet
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input  # Updated for EfficientNet
 from sklearn.utils.class_weight import compute_class_weight
 import json
 from collections import Counter
@@ -46,7 +46,7 @@ NUM_WORKERS = 4
 
 # Data augmentation 
 train_datagen = ImageDataGenerator(
-    preprocessing_function=preprocess_input,  # EfficientNet preprocessing
+    preprocessing_function=preprocess_input,  # MobilenetV2 preprocessing
     rotation_range=20,
     width_shift_range=0.1,
     height_shift_range=0.1,
@@ -150,4 +150,5 @@ print(f"Training samples: {train_generator.samples}")
 print(f"Validation samples: {val_generator.samples}")
 print(f"Test samples: {test_generator.samples}")
 print(f"Number of classes: {len(class_names)}")
+
 print("Class weights for imbalance:", class_weight_dict)
