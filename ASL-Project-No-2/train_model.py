@@ -46,7 +46,7 @@ callbacks = [
     CSVLogger(os.path.join(save_dir, 'training_log.csv'))
 ]
 
-print("🚀 Starting training...")
+
 
 history = model.fit(
     train_generator,
@@ -57,7 +57,7 @@ history = model.fit(
     class_weight=class_weight_dict,
 )
 
-print(f"✅ Training complete. Model saved to {save_dir}")
+print(f"Model saved to {save_dir}")
 
 model.save(os.path.join(save_dir, 'final_model.h5'))
 
@@ -86,7 +86,7 @@ plt.show()
 from sklearn.metrics import classification_report
 import numpy as np
 
-print("🧪 Evaluating on validation set...")
+print("Evaluating on validation set...")
 y_true = val_generator.classes
 y_pred = model.predict(val_generator, batch_size=32, verbose=1)
 y_pred = np.argmax(y_pred, axis=1)
