@@ -13,25 +13,6 @@ An experimental image classifier for the **26 letters of the American Sign Langu
 
 Training and webcam inference both use MobileNetV2's `preprocess_input` and 224 Ã— 224 RGB inputs.
 
-## Repository layout
-
-```text
-.
-â”œâ”€â”€ ASL-Project-No-2/
-â”‚   â”œâ”€â”€ asl_test.py             # Webcam demonstration
-â”‚   â”œâ”€â”€ class_indices.json     # Aâ€“Z class-to-index mapping
-â”‚   â”œâ”€â”€ data_loder.py           # Data loading and augmentation
-â”‚   â”œâ”€â”€ model_builder.py        # MobileNetV2 classifier
-â”‚   â””â”€â”€ train_model.py          # Training and validation report
-â”œâ”€â”€ 20250815_184817/
-â”‚   â”œâ”€â”€ best_model.h5
-â”‚   â”œâ”€â”€ final_model.h5
-â”‚   â”œâ”€â”€ training_log.csv
-â”‚   â””â”€â”€ training_metrics.png
-â”œâ”€â”€ LICENSE
-â””â”€â”€ README.md
-```
-
 ## Results available now
 
 The included `20250815_184817/training_log.csv` records a **best validation accuracy of 67.21% at epoch 26** (out of 30 logged epochs). The final logged validation accuracy is approximately **67.00%**. These are validation measurements, **not independent test-set results**. Training accuracy reached 100% in one epoch, but that number should not be used as a measure of performance on new signers or live webcam images.
