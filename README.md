@@ -23,21 +23,6 @@ Although `data_loder.py` constructs a test generator, the current training scrip
 
 The code uses Python with TensorFlow/Keras, NumPy, Matplotlib, scikit-learn, OpenCV, MediaPipe, and `pyttsx3`. Dependency versions have not yet been pinned or tested together across operating systems; a `requirements.txt` and verified setup instructions are planned.
 
-For training, the code expects a dataset that is **not included** in this repository:
-
-```text
-ASL-Project-No-2/
-â””â”€â”€ ASL_Alphabet_Dataset/
-    â”œâ”€â”€ asl_alphabet_train/
-    â”‚   â”œâ”€â”€ A/ ... images ...
-    â”‚   â”œâ”€â”€ B/ ... images ...
-    â”‚   â””â”€â”€ ... Z/
-    â””â”€â”€ asl_alphabet_test/
-        â”œâ”€â”€ A/ ... images ...
-        â”œâ”€â”€ B/ ... images ...
-        â””â”€â”€ ... Z/
-```
-
 The scripts use paths relative to the current working directory. Run them from inside `ASL-Project-No-2/`, after providing the data and installing compatible dependencies:
 
 ```bash
